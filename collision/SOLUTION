@@ -1,0 +1,9 @@
+ssh col@pwnable.kr -p2222 (pw:guest)
+
+The binary expects 20 bytes as argument.
+Inside the 'check_password' function, out of the all
+20 bytes, 5 integers(4 bytes) are summed up. The 
+resulting sum must equal the hashcode value(0x21DD09EC),
+which can be split as 4 * 0x6c5cec8 + 0x6c5cecc.
+The full payload is created inside the 'tool.py' file,
+taking the endianess into account.
