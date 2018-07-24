@@ -1,0 +1,7 @@
+We are facing a 64bit binary.
+After trying 'strings flag' or 'objdump -d flag' we
+can observe a strange behaviour. That's because the
+binary is packed using UPX. 'strings flag | grep UPX'
+will tell us that the file is indeed compressed.
+For decompression 'upx -d flag'. After that, we
+can run again 'strings flag | grep UPX' and see the flag.

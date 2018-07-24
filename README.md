@@ -1,4 +1,6 @@
 # pwnable.kr problems solutions
-*fd
-*collision
+-fd
+-collision
+-bof
+-flag
 # ...in progress..
